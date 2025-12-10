@@ -1,2 +1,5 @@
 /data
-/.vscode
+/checkpoints
+/tf
+/torch_cuda
+/logs
