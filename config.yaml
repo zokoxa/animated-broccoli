@@ -1,0 +1,35 @@
+project_name: "CECS456 - Image Classification"
+
+data:
+  data_dir: "data/animals"
+  image_size: 224
+  num_classes: 10
+  val_split: 0.2
+  shuffle_buffer: 2048
+
+augmentations:
+  random_flip: true
+  random_rotation: 0.05
+  random_brightness: 0.1
+
+training:
+  batch_size: 64
+  epochs: 50
+
+model:
+  type: "resnet50"
+  weights: null
+  global_pool: "avg"
+
+optimizer:
+  type: "adam"
+  learning_rate: 0.001
+
+logging:
+  log_dir: "logs"
+
+checkpoint:
+  dir: "checkpoints"
+  monitor: "val_loss"
+  mode: "min"
+  save_best_only: true
