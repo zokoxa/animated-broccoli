@@ -6,7 +6,7 @@ import argparse
 from torchvision.models import ResNet50_Weights
 
 
-MODEL_PATH = "checkpoints/best_model.pt" 
+MODEL_PATH = "best_model.pt" 
 CLASS_LIST = ["butterfly","cat","chicken","cow","dog","elephant","horse","sheep","spider","squirrel"] 
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
